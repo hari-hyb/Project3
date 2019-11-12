@@ -1,0 +1,80 @@
+
+<html>
+<body>
+<form action="{% url 'showD' %}" method="post">
+    {% csrf_token %}
+<table align="center">
+    <tr>
+        <td><input type="text" required placeholder="Name" name="t1"></td>
+    </tr>
+    <tr>
+        <td><input type="number" required placeholder="Age" name="t2"></td>
+    </tr>
+    <tr>
+        <td><input type="email" required placeholder="Email" name="t3"></td>
+    </tr>
+
+    <tr>
+        <td><input type="date" required placeholder="DOB" name="t4"></td>
+    </tr>
+
+    <tr>
+        <td>Gender
+            <input type="radio" value="male" name="t5" checked> Male
+            <input type="radio" value = "female" name="t5"> Female
+        </td>
+    </tr>
+
+    <tr>
+        <td> Designation</td>
+        <td>
+            <select name="t6">
+                <option>Developer</option>
+                <option>QA</option>
+                <option>Designer</option>
+                <option>Manager</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Select Languages</td>
+        <td>
+            <select name="t7" multiple>
+                <option>C</option>
+                <option>C++</option>
+                <option>Python</option>
+                <option>Django</option>
+                <option>RTP</option>
+                <option>ORM</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Education</td>
+        <td>
+            <input type="checkbox" name="t8" value="Tenth"> 10th Class
+            <input type="checkbox" name="t8" value="Inter"> Inter
+            <input type="checkbox" name="t8" value="Digree"> Digree
+        </td>
+    </tr>
+
+    <tr>
+        <td><input type="password" placeholder="Password" required name="t9"></td>
+    </tr>
+
+    <tr>
+        <td>
+            <textarea placeholder="Address" name="t10" required></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="submit">Send</button>
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
